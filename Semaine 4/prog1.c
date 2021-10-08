@@ -1,8 +1,8 @@
-int main(int argc, char *argv[])
-{
-    char lettre = 'A';
+#include<stdio.h> 
 
-    printf("%d\n", lettre);
+int main()
+{
+    printf("Hello World \n");
 
     return 0;
 }
