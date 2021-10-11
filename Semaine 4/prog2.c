@@ -1,9 +1,10 @@
+#include<stdlib.h>
 #include <stdio.h>
 
 int main()
 {
     int a, b, c;
-    printf("Entrez le 2eme nombre : ");
+    printf("Entrez le 1eme nombre : ");
     scanf("%d", &a);
     printf("Entrez le 2eme nombre : ");
     scanf("%d", &b);
