@@ -18,7 +18,7 @@ int main()
 
     for (int i = 0; i < TAILLE; i++)
     {
-        printf("Veuillez entrer la note numero %d  : \n" , i );
+        printf("Veuillez entrer la note numero %d  : \n", i);
         scanf("%d", &note);
         tabNote[i] = note;
         nombreNote++;
@@ -30,16 +30,20 @@ int main()
     }
 
     moyenne = total / nombreNote;
-    printf("%f",moyenne);
+    printf("%f", moyenne);
 
     //les écarts à la moyenne (Xi−Moy(Xi)) pour chaque valeur Xi
-    int numero;
     double difference;
+    double totaleDiff;
+    int moyennDifference;
+    for (int i = 0; i < TAILLE; i++)
+    {
+        difference = tabNote[i] - moyenne;
+        totaleDiff += difference;
+    }
+    moyennDifference = totaleDiff/nombreNote;
     printf("\n");
-    printf("Veuillez entrer le numero de l'eleve dont vous souhaitez avoir la difference : \n");
-    scanf("%d", &numero);
-    difference = tabNote[numero-1] - moyenne;
-    return printf("%f",difference);
-    
+    printf("Voici la moyenne des ecarts a la moyenne :  %f \n" + moyennDifference);
+
     exit(0);
 }
