@@ -30,7 +30,16 @@ int main()
     }
 
     moyenne = total / nombreNote;
-    return printf("%f",moyenne);
+    printf("%f",moyenne);
+
+    //les écarts à la moyenne (Xi−Moy(Xi)) pour chaque valeur Xi
+    int numero;
+    double difference;
+    printf("\n");
+    printf("Veuillez entrer le numero de l'eleve dont vous souhaitez avoir la difference : \n");
+    scanf("%d", &numero);
+    difference = tabNote[numero-1] - moyenne;
+    return printf("%f",difference);
     
     exit(0);
 }
