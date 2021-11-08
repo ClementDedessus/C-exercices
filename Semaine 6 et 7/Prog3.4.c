@@ -1,4 +1,4 @@
-//gcc -std=c11 -pedantic -Werror -Wall -Wvla -Wno-unused-variable -o testProg3.4 Prog3.4.c
+//gcc -std=c11 -pedantic -Werror -Wall -Wvla -Wno-unused-variable -o testProg3.4.exe Prog3.4.c
 
 #include <stdio.h>
 #include <stdlib.h>
