@@ -34,18 +34,52 @@ int main(int argc, char **argv)
         }
     }
 
-   //print le tableau
-   for(int i=0; i < H; i++)
-  {
-    for(int j = 0; j < L; j++)
+    //print le tableau
+    for (int i = 0; i < H; i++)
     {
-      printf("%4c",puissance[i][j]);
+        for (int j = 0; j < L; j++)
+        {
+            printf("%4c", puissance[i][j]);
+        }
+        printf("\n");
     }
-    printf("\n");
-  }
 
-
-
+    //TEST
+    int x = 0;
+    int emplacementPiece;
+    while (x < 1000)
+    {
+        if (x % 2 == 0)
+        {
+            printf("Dans quelle colonne voulez vous jouer (X) ? \n");
+            scanf("%d", &emplacementPiece);
+            puissance[H - 1][emplacementPiece - 1] = 'X';
+            for (int i = 0; i < H; i++)
+            {
+                for (int j = 0; j < L; j++)
+                {
+                    printf("%4c", puissance[i][j]);
+                }
+                printf("\n");
+            }
+            x++;
+        }
+        else
+        {
+            printf("Dans quelle colonne voulez vous jouer (O) ? \n");
+            scanf("%d", &emplacementPiece);
+            puissance[H - 1][emplacementPiece - 1] = 'O';
+            for (int i = 0; i < H; i++)
+            {
+                for (int j = 0; j < L; j++)
+                {
+                    printf("%4c", puissance[i][j]);
+                }
+                printf("\n");
+            }
+            x++;
+        }
+    }
 
     /*for (int i = 0; i < H; i++)
         free(puissance[i]);
