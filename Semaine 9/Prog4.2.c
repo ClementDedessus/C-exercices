@@ -26,13 +26,23 @@ int main(int argc, char **argv)
     }
 
     //on remplit le tableau
-    for(int i=0; i<H; i++){
-        for(int j=0; j<L; j++){
+    for (int i = 0; i < H; i++)
+    {
+        for (int j = 0; j < L; j++)
+        {
             puissance[i][j] = '.';
         }
     }
 
-
+   //print le tableau
+   for(int i=0; i < H; i++)
+  {
+    for(int j = 0; j < L; j++)
+    {
+      printf("%4c",puissance[i][j]);
+    }
+    printf("\n");
+  }
 
 
 
