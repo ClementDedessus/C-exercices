@@ -44,7 +44,7 @@ int main(int argc, char **argv)
         printf("\n");
     }
 
-    //TEST
+    //début du jeu
     int x = 0;
     int emplacementPiece;
     while (x < 1000)
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
         }
     }
 
-    /*for (int i = 0; i < H; i++)
+    for (int i = 0; i < H; i++)
         free(puissance[i]);
-    free(puissance);*/
+    free(puissance);
 }
