@@ -8,10 +8,10 @@ int main(int argc, char **argv)
     int H = 0;
     int L = 0;
 
-    printf("Veuillez donner la hauteur \n");
-    scanf("%c", &H);
-    printf("Veuillez donner la largeur \n");
-    scanf("%c", &L);
+    printf("Veuillez donner la hauteur :\n");
+    scanf("%d", &H);
+    printf("Veuillez donner la largeur :\n");
+    scanf("%d", &L);
 
     char **puissance;
     puissance = (char **)malloc(H * sizeof(char *));
@@ -25,14 +25,19 @@ int main(int argc, char **argv)
             exit(1);
     }
 
+    //on remplit le tableau
+    for(int i=0; i<H; i++){
+        for(int j=0; j<L; j++){
+            puissance[i][j] = '.';
+        }
+    }
 
 
 
 
 
 
-
-    for (int i = 0; i < H; i++)
+    /*for (int i = 0; i < H; i++)
         free(puissance[i]);
-    free(puissance);
+    free(puissance);*/
 }
