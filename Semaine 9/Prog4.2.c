@@ -48,7 +48,7 @@ int main(int argc, char **argv)
     int x = 0;
     int emplacementPiece;
     int hauteurPiece = H - 1;
-    while (x < 1000)
+    while (x < 1000) //condition  à modifier -> gagnant
     {
         if (x % 2 == 0)
         {
