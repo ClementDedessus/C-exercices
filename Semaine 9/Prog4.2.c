@@ -3,11 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*int verificationHauteur()
-{
-    
-}*/
-
 int main(int argc, char **argv)
 {
     int H = 0;
@@ -52,13 +47,14 @@ int main(int argc, char **argv)
     //début du jeu
     int x = 0;
     int emplacementPiece;
+    int hauteurPiece = H - 1;
     while (x < 1000)
     {
         if (x % 2 == 0)
         {
             printf("Dans quelle colonne voulez vous jouer (X) ? \n");
             scanf("%d", &emplacementPiece);
-            puissance[H - 1][emplacementPiece - 1] = 'X';
+            puissance[hauteurPiece][emplacementPiece - 1] = 'X';
             for (int i = 0; i < H; i++)
             {
                 for (int j = 0; j < L; j++)
@@ -73,7 +69,7 @@ int main(int argc, char **argv)
         {
             printf("Dans quelle colonne voulez vous jouer (O) ? \n");
             scanf("%d", &emplacementPiece);
-            puissance[H - 1][emplacementPiece - 1] = 'O';
+            puissance[hauteurPiece][emplacementPiece - 1] = 'O';
             for (int i = 0; i < H; i++)
             {
                 for (int j = 0; j < L; j++)
