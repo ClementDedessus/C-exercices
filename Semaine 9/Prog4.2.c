@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*int verificationHauteur()
+{
+    
+}*/
+
 int main(int argc, char **argv)
 {
     int H = 0;
