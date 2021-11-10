@@ -52,6 +52,7 @@ int main(int argc, char **argv)
     int tourDesJoeurs = 0;
     int deplacementPiece = 0;
     int i = 0;
+    int debutImpressionPoint = L;
 
     while (tourDesJoeurs < 100) //condition  à modifier -> gagnant
     {
@@ -60,27 +61,23 @@ int main(int argc, char **argv)
             printf("Dans quelle colonne voulez vous jouer (X) ? \n");
             scanf("%d", &emplacementPiece);
             //realoc
-            if (emplacementPiece > L)
+            if (emplacementPiece >= L)
             {
                 printf("Augmentation de la taille du tableau \n");
-                puissance = (char **)realloc(puissance, emplacementPiece);
+                L = emplacementPiece;
+                for (int i = 0; i < H; i++)
+                {
+                    puissance[i] = (char*)realloc(puissance[i], L*sizeof(char));
+                    if (puissance[i] == NULL)
+                        exit(1);
+                }
                 //on remplit le tableau
                 for (int i = 0; i < H; i++)
                 {
-                    for (int j = 0; j < L; j++)
+                    for (int j = debutImpressionPoint; j < L; j++)
                     {
                         puissance[i][j] = '.';
                     }
-                }
-
-                //print le tableau
-                for (int i = 0; i < H; i++)
-                {
-                    for (int j = 0; j < L; j++)
-                    {
-                        printf("%4c", puissance[i][j]);
-                    }
-                    printf("\n");
                 }
             }
             //deplacement
