@@ -2,11 +2,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>  
+
 
 int main(int argc, char **argv)
 {
     int H = 0;
     int L = 0;
+    bool gagnant = false;
 
     printf("Veuillez donner la hauteur :\n");
     scanf("%d", &H);
@@ -48,9 +51,10 @@ int main(int argc, char **argv)
     int x = 0;
     int emplacementPiece;
     int hauteurPiece = H - 1;
-    while (x < 1000) //condition  à modifier -> gagnant
+    int tourDesJoeurs = 0;
+    while (gagnant == false) //condition  à modifier -> gagnant
     {
-        if (x % 2 == 0)
+        if (tourDesJoeurs % 2 == 0)
         {
             printf("Dans quelle colonne voulez vous jouer (X) ? \n");
             scanf("%d", &emplacementPiece);
@@ -63,7 +67,7 @@ int main(int argc, char **argv)
                 }
                 printf("\n");
             }
-            x++;
+            tourDesJoeurs++;
         }
         else
         {
@@ -78,7 +82,7 @@ int main(int argc, char **argv)
                 }
                 printf("\n");
             }
-            x++;
+            tourDesJoeurs++;
         }
     }
 
