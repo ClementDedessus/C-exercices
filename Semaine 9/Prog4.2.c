@@ -64,7 +64,7 @@ int main(int argc, char **argv)
             if (emplacementPiece >= L)
             {
                 printf("Augmentation de la taille du tableau \n");
-                L = emplacementPiece+1;
+                L = emplacementPiece;
                 for (int i = 0; i < H; i++)
                 {
                     puissance[i] = (char *)realloc(puissance[i], L * sizeof(char));
@@ -107,7 +107,7 @@ int main(int argc, char **argv)
             if (emplacementPiece >= L)
             {
                 printf("Augmentation de la taille du tableau \n");
-                L = emplacementPiece+1;
+                L = emplacementPiece;
                 for (int i = 0; i < H; i++)
                 {
                     puissance[i] = (char *)realloc(puissance[i], L * sizeof(char));
