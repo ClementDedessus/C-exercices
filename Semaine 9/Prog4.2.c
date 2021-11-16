@@ -67,7 +67,7 @@ int main(int argc, char **argv)
                 L = emplacementPiece;
                 for (int i = 0; i < H; i++)
                 {
-                    puissance[i] = (char*)realloc(puissance[i], L*sizeof(char));
+                    puissance[i] = (char *)realloc(puissance[i], L * sizeof(char));
                     if (puissance[i] == NULL)
                         exit(1);
                 }
@@ -103,6 +103,27 @@ int main(int argc, char **argv)
         {
             printf("Dans quelle colonne voulez vous jouer (O) ? \n");
             scanf("%d", &emplacementPiece);
+            //realoc
+            if (emplacementPiece >= L)
+            {
+                printf("Augmentation de la taille du tableau \n");
+                L = emplacementPiece;
+                for (int i = 0; i < H; i++)
+                {
+                    puissance[i] = (char *)realloc(puissance[i], L * sizeof(char));
+                    if (puissance[i] == NULL)
+                        exit(1);
+                }
+                //on remplit le tableau
+                for (int i = 0; i < H; i++)
+                {
+                    for (int j = debutImpressionPoint; j < L; j++)
+                    {
+                        puissance[i][j] = '.';
+                    }
+                }
+            }
+            //deplacement
             while (puissance[hauteurPiece - i][emplacementPiece - 1] != '.')
             {
                 i++;
