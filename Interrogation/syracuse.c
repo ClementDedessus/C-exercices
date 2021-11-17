@@ -32,6 +32,7 @@ int main()
         repUtisateur = resultat;
         compteur++;
     }
+    printf("\n");
     printf("Voici la longueur de la suite : %d \n", compteur);
 
     //POINT 3)
