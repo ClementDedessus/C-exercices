@@ -63,14 +63,17 @@ int main()
     //TODO
 
     //print du tab normal
-    printf("Table à l'endroit : \n");
+    printf("\n");
+    printf("Table a l'endroit : \n");
     for (int i = 0; i < compteur; i++)
     {
         printf("%3d", tabSyracuse[i]);
     }
+    printf("\n");
 
     //print tab à l'envers
-    printf("Table à l'envers : \n");
+    printf("\n");
+    printf("Table a l'envers : \n");
     for (int i = compteur - 1; i >= 0; i--)
     {
         printf("%3d", tabSyracuse[i]);
