@@ -5,8 +5,10 @@
 #define TAILLE 256
 
 int main()
-{
+{   
+    char motATrouver;
     printf("Veuillez entrez un mot : \n");
+    //scanf("%c", &motATrouver);
     char ligne[TAILLE];
     while (fgets(ligne, TAILLE, stdin) != NULL)
     {   
