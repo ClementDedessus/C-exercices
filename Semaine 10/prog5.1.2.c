@@ -11,8 +11,10 @@ int main()
     while (fgets(ligne, TAILLE, stdin) != NULL)
     {
         printf("Le mot lu est : %s", ligne);
+
         //renvoie la taille du mot
         printf("La taille du mot est de : %d", strlen(ligne) - 1);
+        
         //voir si le mot est bien dans la table
         /*if(){
             printf("present \n");
