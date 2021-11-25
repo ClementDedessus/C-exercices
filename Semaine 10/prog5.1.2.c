@@ -7,17 +7,18 @@
 int main(int argc, char *argv[])
 {
     char **table = malloc((argc - 1) * sizeof(char *));
-    for (int i = 1; i < argc; i++)
+    if (!table)
+        exit(0);
+    for (int i = 0; i < argc - 1; i++)
     {
-        table[i] = (char *)malloc(TAILLE_MAX_MOT * sizeof(char));
-        if (table[i] == NULL)
+        table[i] = (char *)malloc((strlen(argv[i + 1]) + 1) * sizeof(char));
+        if (!table[i])
             exit(0);
+        strcpy(table[i], argv[i + 1]);
     }
-
-    for (int i = 1; i < argc; i++)
+    //affiche les mots lu
+    for (int i = 0; i < argc - 1; i++)
     {
-        strcpy(table[i], argv[i]);
+        printf("%s ", table[i]);
     }
-    //affiche le mot lu
-    printf("%s", table);
 }
