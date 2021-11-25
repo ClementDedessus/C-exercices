@@ -35,4 +35,8 @@ int main(int argc, char *argv[])
         printf("La taille de votre mot vaut -> %d \n", strlen(table2) - 1);
         printf("Veuillez entrer un nouveau mot : ");
     }
+
+    for (int i = 0; i < argc - 1; i++)
+        free(table[i]);
+    free(table);
 }
