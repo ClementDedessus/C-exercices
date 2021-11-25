@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 #define TAILLE_MAX_MOT 27
 
@@ -30,9 +31,32 @@ int main(int argc, char *argv[])
     printf("\n");
     printf("Veuillez entrer un nouveau mot :  ");
 
+    bool present;
+
     while (fgets(table2, TAILLE_MAX_MOT, stdin) != NULL)
     {
-        printf("La taille de votre mot vaut -> %d \n", strlen(table2) - 1);
+        table2[strlen(table2) - 1] = '\0';
+        printf("La taille de votre mot vaut -> %d \n", strlen(table2));
+
+        present = false;
+        for (int i = 0; i < argc - 1; i++)
+        {
+            if (!strcmp(table2, table[i]))
+            {
+                present = !present;
+                break;
+            }
+        }
+
+        if (present)
+        {
+            printf("-> Votre mot est present \n ");
+        }
+        else
+        {
+            printf("-> Votre mot est absent \n");
+        }
+
         printf("Veuillez entrer un nouveau mot : ");
     }
 
