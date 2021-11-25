@@ -21,4 +21,18 @@ int main(int argc, char *argv[])
     {
         printf("%s ", table[i]);
     }
+
+    char *table2;
+    table2 = (char *)malloc(TAILLE_MAX_MOT * sizeof(char));
+    if (!table2)
+        exit(1);
+
+    printf("\n");
+    printf("Veuillez entrer un nouveau mot :  ");
+
+    while (fgets(table2, TAILLE_MAX_MOT, stdin) != NULL)
+    {
+        printf("La taille de votre mot vaut -> %d \n", strlen(table2) - 1);
+        printf("Veuillez entrer un nouveau mot : ");
+    }
 }
