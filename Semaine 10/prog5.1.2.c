@@ -2,28 +2,22 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TAILLE 256
+#define TAILLE_MAX_MOT 27
 
-int main()
-{   
-    char motATrouver;
-    printf("Veuillez entrez un mot : \n");
-    //scanf("%c", &motATrouver);
-    char ligne[TAILLE];
-    while (fgets(ligne, TAILLE, stdin) != NULL)
-    {   
-        //renvoie le mot
-        printf("Le mot lu est : %s", ligne);
-
-        //renvoie la taille du mot
-        printf("La taille du mot est de : %d", strlen(ligne) - 1);
-
-        //voir si le mot est bien dans la table
-        /*if(){
-            printf("present \n");
-        }else{
-            printf("absent \n");
-        }*/
-        exit(0);
+int main(int argc, char *argv[])
+{
+    char **table = malloc((argc - 1) * sizeof(char *));
+    for (int i = 1; i < argc; i++)
+    {
+        table[i] = (char *)malloc(TAILLE_MAX_MOT * sizeof(char));
+        if (table[i] == NULL)
+            exit(0);
     }
+
+    for (int i = 1; i < argc; i++)
+    {
+        strcpy(table[i], argv[i]);
+    }
+    //affiche le mot lu
+    printf("%s", table);
 }
