@@ -20,5 +20,6 @@ int main(int argc, char *argv[])
     char ligne[TAILLE];
     while (fgets(ligne, TAILLE, stdin) != NULL)
     {
+        ligne[strlen(ligne) - 1] = '\0';
     }
 }
