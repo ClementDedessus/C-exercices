@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
     printf("Veuillez entrer un nouveau mot :  ");
 
     bool present;
+    int compteurAbsent = 0;
 
     while (fgets(table2, TAILLE_MAX_MOT, stdin) != NULL)
     {
@@ -55,10 +56,13 @@ int main(int argc, char *argv[])
         else
         {
             printf("-> Votre mot est absent \n");
+            compteurAbsent++;
         }
 
         printf("Veuillez entrer un nouveau mot : ");
     }
+
+    printf("Nombre de mots lu qui n'ont pas été trouvé dans la table -> '%d' ", compteurAbsent );
 
     for (int i = 0; i < argc - 1; i++)
         free(table[i]);
