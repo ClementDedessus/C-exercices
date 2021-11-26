@@ -68,4 +68,6 @@ int main(int argc, char *argv[])
     for (int i = 0; i < argc - 1; i++)
         free(table[i]);
     free(table);
+
+    exit(0);
 }
