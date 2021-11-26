@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
         printf("Veuillez entrer un nouveau mot : ");
     }
 
-    printf("\n");
     printf("Nombre de mots lu qui n'ont pas ete trouve dans la table -> '%d' ", compteurAbsent);
 
     for (int i = 0; i < argc - 1; i++)
