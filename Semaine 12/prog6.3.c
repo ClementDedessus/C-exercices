@@ -37,4 +37,5 @@ int *prime_numbers(int n, int *sz)
 
 int main()
 {
+    
 }
