@@ -34,6 +34,7 @@ int *prime_numbers(int n, int *sz)
     *sz = nombreNombrePremier;
     return table;
 }
+
 //PRE : t : tableau de longueur sz
 //POST : t représente un tableau trié contenant les sz premiers nombres premiers
 void first_prime_numbers(int *t, int sz)
@@ -44,10 +45,23 @@ void first_prime_numbers(int *t, int sz)
     while (szr < sz)
     {
         n = n * 2;
+        free(res);
         res = prime_numbers(n, &szr);
     }
+    for (int i = 0; i < sz; i++)
+    {
+        t[i] = res[i];
+    }
+    free(res);
 }
 
 int main()
 {
+    int test[1000];
+    first_prime_numbers(test, 1000);
+    for (int i = 0; i < 1000; i++)
+    {
+        printf("%5d", test[i]);
+    }
+    exit(0);
 }
