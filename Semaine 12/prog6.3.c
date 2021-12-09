@@ -15,18 +15,28 @@ int *prime_numbers(int n, int *sz)
     {
         table[i] = i;
     }
-    int compteur = 0;
+    int nombreNombrePremier = 0;
     for (int i = 0; i < n; i++)
     {
-        if (n % i == 0)
+        int compteur = 0;
+        for (int div = 1; div < n; div++)
         {
-            compteur++;
+
+            if (i % div == 0)
+            {
+                compteur++;
+            }
+        }
+        if (compteur == 2)
+        {
+            table[nombreNombrePremier] = i;
+            nombreNombrePremier++;
         }
     }
-    if(compteur=2){
-       
-    }
-    return 0;
+    table = (int *)realloc(table, nombreNombrePremier * sizeof(int));
+
+    *sz = nombreNombrePremier;
+    return table;
 }
 
 int main()
