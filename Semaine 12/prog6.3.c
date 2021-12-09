@@ -41,11 +41,11 @@ int *prime_numbers(int n, int *sz)
 
 int main()
 {
-    int n = 5;
+    int n = 500;
     int size;
     int *test = prime_numbers(n, &size);
     for (int i = 0; i < size; i++)
     {
-        printf("%3d", test[i]);
+        printf("%4d", test[i]);
     }
 }
