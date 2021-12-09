@@ -15,22 +15,27 @@ int *prime_numbers(int n, int *sz)
     {
         table[i] = i;
     }
+    int compteur = 0;
     for (int i = 0; i < n; i++)
     {
-        if (table[i] == 2 || table[i] == 3 || table[i] == 5 || table[i] == 7)
+        if (n % i == 0)
         {
+            compteur++;
         }
-        if (table[i] % 2 == 0 || table[i] % 3 == 0 || table[i] % 5 == 0 || table[i] % 7 == 0)
-        {
-            table[i] = 0;
-        }
+    }
+    if(compteur=2){
+       
     }
     return 0;
 }
 
 int main()
 {
-    int nombreElement = 5;
-    int size = 10;
-
+    int n = 5;
+    int size;
+    int *test = prime_numbers(n, &size);
+    for (int i = 0; i < size; i++)
+    {
+        printf("%3d", test[i]);
+    }
 }
