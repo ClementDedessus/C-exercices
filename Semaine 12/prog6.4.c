@@ -38,6 +38,14 @@ int *prime_numbers(int n, int *sz)
 //POST : t représente un tableau trié contenant les sz premiers nombres premiers
 void first_prime_numbers(int *t, int sz)
 {
+    int n = 2;
+    int szr;
+    int *res = prime_numbers(n, &szr);
+    while (szr < sz)
+    {
+        n = n * 2;
+        res = prime_numbers(n, &szr);
+    }
 }
 
 int main()
