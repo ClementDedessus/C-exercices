@@ -25,17 +25,12 @@ int *prime_numbers(int n, int *sz)
             table[i] = 0;
         }
     }
-    for (int i = 0; i < n; i++)
-    {
-        if(table[i] == 0 ){
-            table[i] = table[i+1];
-        }
-        //test
-        printf("%d", table[i]);
-    }
+    return 0;
 }
 
 int main()
 {
-    
+    int nombreElement = 5;
+    int size = 10;
+
 }
