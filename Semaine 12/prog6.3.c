@@ -48,4 +48,7 @@ int main()
     {
         printf("%4d", test[i]);
     }
+    free(test);
+
+    exit(0);
 }
