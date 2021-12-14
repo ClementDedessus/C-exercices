@@ -57,9 +57,9 @@ void first_prime_numbers(int *t, int sz)
 
 int main()
 {
-    int test[1000];
-    first_prime_numbers(test, 1000);
-    for (int i = 0; i < 1000; i++)
+    int test[10];
+    first_prime_numbers(test, 10);
+    for (int i = 0; i < 10; i++)
     {
         printf("%5d", test[i]);
     }
