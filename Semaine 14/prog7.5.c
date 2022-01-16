@@ -7,8 +7,6 @@ char **copierArgs(char **tab, int n, int *ncp);
 void trier(char **tab, int n);
 void afficher(char **tab, int n);
 
-int main(int argc, char *argv[])
-{
     // Copie profonde des arguments du programme
 
     // Affichage du tableau
